@@ -1,0 +1,31 @@
+public class EjercicioFinal {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner (System.in);
+        System.out.println("Reporte de estaturas");
+        int contador=1;
+        double estatura = 0;
+        double restric=1.20;
+        boolean estatura1=true;
+        System.out.println("Desea ingresar mas estaturas (si o no)");
+        
+            String temporal = entrada.nextLine();
+            if (temporal.equals("no")) {
+                estatura1 = false;
+            }
+            else{
+                System.out.println("Ingrese las demas estaturas");
+                estatura= entrada.nextDouble();
+                
+            }  
+        System.out.printf("%s\n","Estatura Estudiante", estatura);
+        
+        while (estatura1){
+        if (estatura<restric){
+            estatura = restric;
+            System.out.println(estatura);
+            contador = contador +1;
+        }
+        }
+        entrada.nextLine();
+    }
+}
